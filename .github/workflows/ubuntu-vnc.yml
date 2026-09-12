@@ -67,7 +67,7 @@ jobs:
 
       - name: Connect to Tailscale
         run: |
-          sudo tailscale up --authkey=${{ secrets.TAILSCALE_AUTH_KEY }} --hostname=gh-runner-${GITHUB_RUN_ID}
+          sudo tailscale up --authkey=${{ secrets.TAILSCALE_AUTH_KEY }} --hostname=temp-Ubuntu-id-${GITHUB_RUN_ID}
           echo "TAILSCALE_IP=$(tailscale ip -4)" >> "$GITHUB_ENV"
 
       - name: Restore systemctl hooks
