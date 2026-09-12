@@ -1,6 +1,6 @@
 # Bring up Tailscale and get IP
 
-& "$env:ProgramFiles\Tailscale\tailscale.exe" up --authkey=$env:TAILSCALE_AUTH_KEY --hostname=gh-runner-$env:GITHUB_RUN_ID
+& "$env:ProgramFiles\Tailscale\tailscale.exe" up --authkey=$env:TAILSCALE_AUTH_KEY --hostname=temp-windows-id-$env:GITHUB_RUN_ID
 
 
 $tsIP = $null
